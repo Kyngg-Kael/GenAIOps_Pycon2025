@@ -17,7 +17,7 @@ if "chat_history" not in st.session_state:
 
 # Cargar vectorstore y cadena
 vectordb = load_vectorstore_from_disk()
-chain = build_chain(vectordb)
+chain = build_chain(vectordb, prompt_version="v1_asistente_rrhh")
 
 if question:
     with st.spinner("Pensando..."):
